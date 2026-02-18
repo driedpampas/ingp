@@ -1,4 +1,4 @@
-package org.example;
+package lab.lab01;
 
 public class Main {
     static void main() {
