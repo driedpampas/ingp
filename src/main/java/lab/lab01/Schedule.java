@@ -13,11 +13,22 @@ public class Schedule {
     }
 
     public void addClass(Class c, int day, int hour) {
-        if (schedule[day][hour] != null) {
+        if (schedule[day][hour] != null||schedule[day][hour+1]!=null) {
             IO.println("Conflict detected: " + schedule[day][hour].getName() + " is already scheduled");
             conflicts++;
         }
         schedule[day][hour] = c;
+        schedule[day][hour+1] = c;
+    }
+
+    public void addClass(Class c, int day, int hour, int duration) {
+        for (int i = 0; i < duration; i++) {
+            if (schedule[day][hour + i] != null) {
+                IO.println("Conflict detected: " + schedule[day][hour + i].getName() + " is already scheduled");
+                conflicts++;
+            }
+            schedule[day][hour + i] = c;
+        }
     }
 
     public void startClass(int day, int hour) {

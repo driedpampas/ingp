@@ -1,5 +1,5 @@
 package lab.lab01;
 
-abstract public class Activity {
+interface Activity {
     public abstract void start();
 }
