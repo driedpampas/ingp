@@ -15,4 +15,13 @@ public class Grades {
     public double getGrade(Enrollment enrollment) {
         return grades.get(enrollment);
     }
+
+    public void printGrades() {
+        for (Map.Entry<Enrollment, Double> entry : grades.entrySet()) {
+            IO.println(String.format("Student ID: %s, Course: %s, Grade: %.2f",
+                    entry.getKey().getStudentId(),
+                    entry.getKey().getCourseName(),
+                    entry.getValue()));
+        }
+    }
 }
