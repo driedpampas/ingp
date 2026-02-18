@@ -4,6 +4,22 @@ abstract class Class extends Activity{
     int timeStart, timeEnd;
     Professor professor;
     String name;
+
+    public Class() {
+        name = "Unknown";
+        professor = new Professor("Unknown", 0);
+    }
+
+    public Class(String name) {
+        this.name = name;
+        professor = new Professor("Unknown", 0);
+    }
+
+    public Class(String name, Professor professor) {
+        this.name = name;
+        this.professor = professor;
+    }
+
     public abstract String requirements();
     public abstract String getName();
 
