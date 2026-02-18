@@ -5,6 +5,7 @@ public class Student extends Person {
 
     Student(String name, int age) {
         super(name, age);
+        id = "Unknown";
     }
 
     Student(String name, int age, String newId){
@@ -14,5 +15,8 @@ public class Student extends Person {
 
     public String getDescription() {
         return String.format("Student %s (%d years old)", getName(), getAge());
+    }
+    public String getId() {
+        return id;
     }
 }

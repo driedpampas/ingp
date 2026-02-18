@@ -3,7 +3,7 @@ package lab.lab01;
 import java.util.Map;
 
 public class Grades {
-    Map<Enrollment, Double> grades;
+    Map<Enrollment, Double> grades = new java.util.HashMap<>();
 
     public void setGrade(Enrollment enrollment, double grade) {
         if (grade < 0.0 || grade > 10.0) {
