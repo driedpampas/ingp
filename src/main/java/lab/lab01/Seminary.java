@@ -1,14 +1,14 @@
 package lab.lab01;
 
 public class Seminary extends Class {
-    void start() {
+    public void start() {
         IO.println(String.format("Seminary %s is starting!", name));
     }
 
-    String requirements() {
+    public String requirements() {
         return "Requirements: pen and paper.";
     }
-    String getName() {
+    public String getName() {
         return "Seminary name: " + name;
     }
 }

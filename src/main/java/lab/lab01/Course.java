@@ -2,14 +2,14 @@ package lab.lab01;
 
 public class Course extends Class {
 
-    void start() {
+    public void start() {
         IO.println(String.format("Course %s is starting!", name));
     }
 
-    String requirements() {
+    public String requirements() {
         return "No requirements.";
     }
-    String getName() {
+    public String getName() {
         return "Course name: " + name;
     }
 }
