@@ -1,8 +1,8 @@
 package lab.lab01;
 
 public class Enrollment {
-    public String studentId;
-    public String courseName;
+    String studentId;
+    String courseName;
 
     public Enrollment(String newStudentId, String newCourseName) {
         if (newStudentId == null || newCourseName == null || newStudentId.isEmpty() || newCourseName.isEmpty()) {
