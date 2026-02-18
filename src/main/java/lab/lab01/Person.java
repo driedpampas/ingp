@@ -7,7 +7,13 @@ abstract class Person {
 
     Person(String name, int age) {
         this.name = name;
-        this.age = age;
+        if (age < 0 || age > 150) {
+            System.out.println("Invalid age. Age must be between 0 and 150.");
+            this.age = 0; //default 0
+        }
+        else {
+            this.age = age;
+        }
     }
 
     public void setIncome(int newIncome) {
@@ -23,6 +29,10 @@ abstract class Person {
     }
 
     public void setAge(int newAge) {
+        if(newAge < 0||newAge > 150) {
+            System.out.println("Invalid age. Age must be between 0 and 150.");
+            return;
+        }
         age = newAge;
     }
 

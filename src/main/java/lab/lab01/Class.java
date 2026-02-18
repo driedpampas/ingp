@@ -1,6 +1,6 @@
 package lab.lab01;
 
-abstract class Class extends Activity{
+abstract class Class implements Activity{
     int timeStart, timeEnd;
     Professor professor;
     String name;
